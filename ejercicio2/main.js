@@ -60,7 +60,7 @@ function numero_1_a_10_while() {
     document.write('Ciclo While');
     console.log('Ciclo While');
     while (i < 11) {
-        i += 1
+        i++;
         document.write(i);
         document.write('<br>');
         console.log(i);
@@ -185,19 +185,20 @@ function caracter() {
     document.write('La palabra ', caracter, ' tiene ', caracter.length, ' de letras');
     console.log('La palabra ', caracter, ' tiene ', caracter.length, ' de letras')
 };
+
 // decimocuarta Función que invierta una palabra (ej: "hola" → "aloh")
 function invertir_palabra() {
     let caracter = prompt('ingrese una  palabra a invertir ....');
-    let palabra_alreves = "";
-    for (let i = caracter.length - 1; i >= 0; i--) {
-        let letras = caracter[i];
-        palabra_alreves += letras;
-        document.write(letras, '<br>');
-        console.log(letras, '<br>');
+    let inverso = "";
+    for (let i = palabra.length - 1; i >= 0; i--) {
+        inverso += palabra[i];
+        document.write(inverso, '<br>');
+        console.log(inverso, '<br>');
     }
-    document.write(palabra_alreves);
-    console.log(palabra_alreves);
+    document.write(inverso);
+    console.log(inverso);
 };
+
 //decimaQuinta funcion que determine si una palabra es palíndroma
 function palabra_palindroma() {
     let caracter = prompt('ingrese una palabra.... ').toLowerCase();
@@ -299,6 +300,15 @@ function login() {
     }
 }
 
+function suma_digito() {
+    let n1 = prompt('ingrese un numero').trim();
+    let suma = 0;
+    for (let i = 0; i < n1.length; i++) {
+        suma += Number(n1[i]);
+    }
+    console.log(suma);
+}
+
 
 //inicializacion de funciones
 /*numero_p_n();
@@ -322,4 +332,6 @@ suma_numero_pares();
 numeros_primos();
 asteriscos();
 cajero();
-login();*/
+login();
+suma_digito();*/
+invertir_palabra2();
